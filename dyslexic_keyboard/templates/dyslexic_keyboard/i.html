@@ -1,0 +1,20 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'dyslexic_keyboard/style.css' %}">
+
+<div class="form">
+<form action="/keyboard/" method="post">
+    {% csrf_token %}
+    <div class="search-field">
+    {{ form }}
+    <div class="buttons">
+    <input type="submit" value="Submit">
+</div>
+</div>
+
+    <div class="form">
+    <input type="text" name="name" placeholder={{suggestion1}}>
+    <input type="text" name="name" placeholder={{suggestion2}}>
+    <input type="text" name="name" placeholder={{suggestion3}}>
+</div>
+</form>
